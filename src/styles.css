@@ -73,7 +73,6 @@ ul li {
 }
 
 ul li:before {
-    color: ;
     content : "";
     position: absolute;
     height: 28px ;
@@ -85,3 +84,12 @@ ul li:before {
     background-size: cover;
     background-position:center ;
 }
+
+ul li.checked {
+    color : #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+} 
