@@ -1,7 +1,7 @@
 const inputBox = document.getElementById('input-box')
 const listContainer = document.getElementById('list-container')
 
-const  adddTask = () => {
+const  addTask = () => {
     if (inputBox.value === ''){
         window.alert("You must write something!")
     }
@@ -9,5 +9,9 @@ const  adddTask = () => {
         let li = document.createElement('li')
         li.innerHTML = inputBox.value
         listContainer.appendChild(li)
+        let span = document.createElement('span')
+        span.innerHTML ="\u00d7";
+        li.appendChild(span)
     }
+    inputBox.value = ''
 }
